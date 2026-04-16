@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>InstaCeleb</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+.insta-gradient {
+  background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.insta-soft {
+  background: linear-gradient(120deg, rgba(254,218,117,0.15), rgba(214,41,118,0.1), rgba(79,91,213,0.1));
+}
+</style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+<!-- 🔥 NAVBAR (DESKTOP) -->
+<header class="bg-white border-b sticky top-0 z-50 hidden md:block">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 insta-gradient rounded-md"></div>
+      <h1 class="text-xl font-bold">InstaCeleb</h1>
+    </div>
+
+    <input type="text" placeholder="Search influencers, categories..."
+      class="w-1/3 px-4 py-2 border rounded-md focus:ring-2 focus:ring-pink-400 outline-none">
+
+    <div class="flex gap-4 items-center">
+      <span class="cursor-pointer">Explore</span>
+      <span class="cursor-pointer">Brands</span>
+      <span class="cursor-pointer">Creators</span>
+      <button class="px-4 py-2">Login</button>
+      <button class="px-4 py-2 rounded-md insta-gradient text-white">Join</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- 🔥 MOBILE TOP BAR -->
+<header class="md:hidden bg-white border-b sticky top-0 z-50 px-4 py-3 flex justify-between items-center">
+  <h1 class="font-bold text-lg">InstaCeleb</h1>
+  <div class="w-8 h-8 insta-gradient rounded-md"></div>
+</header>
+
+<!-- 🔥 HERO -->
+<section class="insta-soft">
+  <div class="max-w-7xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+
+    <div>
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+        Book Influencers.<br>Grow Faster.
+      </h2>
+
+      <p class="text-gray-600 mt-4">
+        Promotions, reels, brand deals & virtual appointments — all in one place.
+      </p>
+
+      <div class="flex gap-3 mt-6">
+        <button class="px-5 py-3 insta-gradient text-white rounded-md">
+          Hire Now
+        </button>
+        <button class="px-5 py-3 border rounded-md">
+          Become Creator
+        </button>
+      </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd53"
+         class="rounded-xl shadow-lg hidden md:block">
+
+  </div>
+</section>
+
+<!-- 🔥 CATEGORIES -->
+<section class="max-w-7xl mx-auto px-4 mt-8">
+  <div class="flex gap-4 overflow-x-auto pb-3 text-sm">
+    <span class="px-4 py-2 bg-white rounded-full shadow">🔥 Trending</span>
+    <span class="px-4 py-2 bg-white rounded-full shadow">Fashion</span>
+    <span class="px-4 py-2 bg-white rounded-full shadow">Tech</span>
+    <span class="px-4 py-2 bg-white rounded-full shadow">Fitness</span>
+    <span class="px-4 py-2 bg-white rounded-full shadow">Gaming</span>
+  </div>
+</section>
+
+<!-- 🔥 INFLUENCER CARDS -->
+<section class="max-w-7xl mx-auto px-4 mt-6">
+
+  <h3 class="text-xl font-semibold mb-4">Trending Influencers</h3>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+    <!-- CARD -->
+    <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition">
+
+      <img src="https://picsum.photos/400/300"
+           class="h-36 w-full object-cover rounded-t-xl">
+
+      <div class="p-3">
+        <div class="flex items-center gap-2">
+          <img src="https://i.pravatar.cc/30" class="w-6 h-6 rounded-full">
+          <span class="text-sm font-medium">Creator</span>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-1">
+          Instagram Reel Promotion
+        </p>
+
+        <p class="font-semibold mt-2">₹4,999</p>
+      </div>
+    </div>
+
+    <!-- DUPLICATE -->
+    <script>
+      const grid = document.currentScript.parentElement;
+      for(let i=0;i<7;i++){
+        grid.innerHTML += grid.children[1].outerHTML;
+      }
+    </script>
+
+  </div>
+
+</section>
+
+<!-- 🔥 JOIN CREATOR -->
+<section class="insta-soft mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+         class="rounded-xl shadow-lg">
+
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">
+        Turn Your Audience into Income
+      </h2>
+
+      <p class="text-gray-600 mt-3">
+        Get brand deals, paid reels, and bookings from businesses.
+      </p>
+
+      <button class="mt-5 px-6 py-3 insta-gradient text-white rounded-md">
+        Join as Celebrity
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🔥 MOBILE BOTTOM NAV (APP STYLE) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t md:hidden flex justify-around py-2 text-xs">
+
+  <div class="flex flex-col items-center">
+    <span>🏠</span>
+    <span>Home</span>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <span>🔍</span>
+    <span>Search</span>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <span>➕</span>
+    <span>Post</span>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <span>💬</span>
+    <span>Chat</span>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <span>👤</span>
+    <span>Profile</span>
+  </div>
+
+</div>
+
+<!-- 🔥 FOOTER -->
+<footer class="bg-black text-white py-8 text-center mt-16 hidden md:block">
+  <p>© 2026 InstaCeleb</p>
+</footer>
+
+</body>
+</html>
